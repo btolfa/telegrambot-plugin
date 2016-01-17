@@ -13,6 +13,9 @@
                 <f:textbox />
                 <!-- TODO: checkUrl for group chat id - -123456 -->
             </f:entry>
+            <f:advanced>
+                <super:global-jenkinsLogin />
+            </f:advanced>
         </f:optionalBlock>
   </f:section>
 </j:jelly>
