@@ -5,12 +5,12 @@
     <f:section title="Telegram Notification">
         <f:optionalBlock name="${descriptor.PARAMETERNAME_ENABLED}" title="Enable Telegram Notification"
         checked="${descriptor.enabled}">
-            <f:entry title="Telegram bot token" field="token">
-                <f:textbox />
+            <f:entry title="Telegram bot token">
+                <f:textbox field="token"/>
                 <!-- TODO: checkUrl for token it - should be like 110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw -->
             </f:entry>
-            <f:entry title="Initial group chat id" field="groupChatId">
-                <f:textbox />
+            <f:entry title="Initial group chat id">
+                <f:textbox field="groupChatId"/>
                 <!-- TODO: checkUrl for group chat id - -123456 -->
             </f:entry>
             <f:advanced>
