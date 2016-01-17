@@ -1,16 +1,13 @@
 <?jelly escape-by-default='true'?>
-<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
-  <!--
-    This jelly script is used for per-project configuration.
-
-    See global.jelly for a general discussion about jelly script.
-  -->
-
-  <!--
-    Creates a text field that shows the value of the "name" property.
-    When submitted, it will be passed to the corresponding constructor parameter.
-  -->
-  <f:entry title="Name" field="name">
-    <f:textbox />
-  </f:entry>
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout"
+         xmlns:t="/lib/hudson" xmlns:f="/lib/form" xmlns:super="/hudson/plugins/im/IMPublisher">
+    <f:entry title="Targets" field="targets"
+             description="Whitespace separated list of accounts to send notifications to (like '@peter')">
+        <f:textbox/>
+    </f:entry>
+    <f:advanced>
+        <super:notification-strategy/>
+        <super:config-buildToChatNotifier/>
+        <super:further-config/>
+    </f:advanced>
 </j:jelly>
